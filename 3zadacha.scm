@@ -1,4 +1,8 @@
 #lang scheme
+(define( prime? chisl )
+  (ost? chisl (- chisl 1
+
+                 )))
 (define( ost? chisl znam)
   (cond ((= znam 1)
          (display "#t"))
@@ -8,4 +12,4 @@
                ((>(remainder chisl znam) 0)
                 (ost? chisl (- znam 1))))))
   )
-(ost? 8 7) 
+(prime? (read))
