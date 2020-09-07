@@ -1,0 +1,11 @@
+#lang scheme
+(define( ost? chisl znam)
+  (cond ((= znam 1)
+         (display "#t"))
+        ((> znam 1)
+         (cond ((=(remainder chisl znam) 0)
+                (display "#f"))
+               ((>(remainder chisl znam) 0)
+                (ost? chisl (- znam 1))))))
+  )
+(ost? 8 7) 
