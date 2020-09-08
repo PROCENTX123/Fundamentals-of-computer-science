@@ -1,0 +1,20 @@
+#lang scheme
+(define (my-lcm? a b)
+  (cond ((and (> a 0) ( > b 0)
+              (cond (( > a b)
+                      (*(/ a (my-gcd(remainder a b) b)) b))
+                    (( < a b)
+                      (*(/ b(my-gcd a (remainder b a))) a)))
+  ))))
+(define (my-gcd a b)
+  (cond ((and (> a 0) (> b 0))
+         (cond ((> a b)
+                (my-gcd (remainder a b) b))
+               ((< a b)
+                (my-gcd a (remainder b a)))))
+        ((or (= a 0)  (= b 0))
+         (+ a b)))) 
+#;(my-lcm? (read) (read))
+(my-lcm? 3 4)
+
+

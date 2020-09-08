@@ -12,4 +12,6 @@
                ((>(remainder chisl znam) 0)
                 (ost? chisl (- znam 1))))))
   )
-(prime? (read))
+#;(prime? (read))
+(prime? 11)
+#;(prime? 12)
